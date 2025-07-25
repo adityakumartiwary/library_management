@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+</head>
+<body>
+    <h1>Welcome to our library</h1>
+    <form method="POST" action="/save">
+        {% csrf_token %}
+        <table>
+            <tbody>
+                <tr>
+                    <td><label class="my_label">Student name</label></td>
+                    <td><input type="text" name="student_name"></td>
+                </tr>
+                <tr hidden>
+                    <td><label class="my_label my_secondary_label">Student age</label></td>
+                    <td><input type="text" name="student_age"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" style="background:green;display:block;margin-top:15px;margin-bottom:15px;font-size:18px;">
+                            Submit
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    
+</body>
+</html>

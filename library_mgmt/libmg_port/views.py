@@ -4,8 +4,10 @@ from django.http import HttpResponse
 from django.shortcuts import render,redirect
 
 # Create your views here.
+
+
 def home(request):
-    return render(request,"index.html",context={})
+    return render(request, "home.html", context={"current_tab": "home"})
 
 def shopping_cart(request):
     return HttpResponse("This is the shopping cart page")
