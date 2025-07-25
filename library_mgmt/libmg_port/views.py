@@ -5,4 +5,7 @@ from django.shortcuts import render,redirect
 
 # Create your views here.
 def home(request):
-    return HttpResponse("Welcome to the Library Management System")
+    return render(request,"index.html",context={})
+
+def shopping_cart(request):
+    return HttpResponse("This is the shopping cart page")
